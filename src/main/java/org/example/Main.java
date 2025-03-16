@@ -3,11 +3,14 @@ package org.example;
 import org.example.designpattern.observer.simple.Message;
 import org.example.designpattern.observer.simple.PushNotification;
 import org.example.designpattern.observer.simple.SocialMediaObserver;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        System.out.println("Hello world!");
+        SpringApplication.run(Main.class, args);
         PushNotification subjecter = new PushNotification();
         SocialMediaObserver instagram = new SocialMediaObserver("Instagram");
         SocialMediaObserver facebook = new SocialMediaObserver("Facebook");
